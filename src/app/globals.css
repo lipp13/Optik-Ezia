@@ -1,0 +1,117 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+:root {
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+
+  --color-ivory: #FBFBF9;
+  --color-paper: #F4F2EC;
+  --color-charcoal: #121314;
+  --color-black: #0A0A0A;
+  --color-stone: #8E8D8A;
+  --color-champagne: #E5DFC8;
+  --color-accent: #2D4B50;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #0A0A0A;
+  color: #FBFBF9;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0A0A0A;
+  color: #FBFBF9;
+  selection-background-color: #E5DFC8;
+  selection-color: #0A0A0A;
+}
+
+::selection {
+  background: #E5DFC8;
+  color: #0A0A0A;
+}
+
+/* Custom Thin Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0A0A;
+}
+::-webkit-scrollbar-thumb {
+  background: #262729;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #E5DFC8;
+}
+
+/* Lenis smooth scroll recommended fixes */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* Editorial Fluid Typography Utilities */
+.text-clamp-editorial-hero {
+  font-size: clamp(2.8rem, 8.5vw, 9.5rem);
+  line-height: 0.94;
+  letter-spacing: -0.035em;
+}
+
+.text-clamp-editorial-statement {
+  font-size: clamp(2.2rem, 6vw, 6.5rem);
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+}
+
+.text-clamp-editorial-heading {
+  font-size: clamp(1.8rem, 4.5vw, 4.5rem);
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+}
+
+/* Microcopy Technical Tags */
+.editorial-tag {
+  font-size: 10px;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #E5DFC8;
+}
+
+/* Hairline Dividers */
+.border-hairline {
+  border-color: rgba(244, 242, 236, 0.12);
+}
+
+.bg-grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.035'/%3E%3C/svg%3E");
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
