@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Instagram, MapPin, Phone } from "lucide-react";
+import { Instagram, MapPin, Phone, Heart } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -105,9 +105,25 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Footer Bottom Bar */}
+        {/* Footer Bottom Bar with Developer Credit */}
         <div className="flex flex-col items-center justify-between gap-4 pt-8 text-[10px] uppercase tracking-widest text-ezia-stone sm:flex-row font-mono">
           <p>© {new Date().getFullYear()} OPTIK EZIA. HAK CIPTA DILINDUNGI.</p>
+
+          {/* Developer Attribution Credit */}
+          <div className="flex items-center space-x-1.5 rounded-full border border-hairline bg-ezia-charcoal/40 px-4 py-1.5 text-ezia-ivory">
+            <span>Designed & Developed with</span>
+            <Heart className="h-3 w-3 text-rose-500 fill-rose-500" />
+            <span>by</span>
+            <a
+              href="https://github.com/lipp13"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-ezia-champagne font-semibold hover:underline"
+            >
+              Alif Alfathar
+            </a>
+          </div>
+
           <div className="flex items-center space-x-6">
             <span className="hover:text-ezia-ivory transition-colors">PRIVASI</span>
             <span className="hover:text-ezia-ivory transition-colors">KETENTUAN</span>
